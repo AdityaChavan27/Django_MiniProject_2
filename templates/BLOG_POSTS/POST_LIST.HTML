@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entry Records</title>
+     {% load staticfiles %}
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+            <th> Author_Name</th>
+            <th> Places</th>
+            <th> date </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for create_blog in create_blogs %}
+        <tr>
+            <td> {{create_blog.Author_Name}}</td>
+            <td> {{create_blog.places}}</td>
+            <td> {{create_blog.date}}</td>
+            <td>
+                <a href="/BLOG_POSTS/delete/{{create_blog.id}} "   class ="btn btn-default"> DELETE</a>
+            </td>
+            <td>
+                <a href="/BLOG_POSTS/edit/{{create_blog.id}}"class ="btn btn-default"> EDIT</a>
+            </td>
+        </tr>
+<!-- <a href="/delete/{{ employee.id }}">DELETE</a>
+<a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a> -->
+        </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<center><a href="/BLOG_POSTS/success" class="btn btn-primary">Add New Records</a></center>
+ -->
+</body>
+</html>
