@@ -1,9 +1,11 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 from . import forms
 from . import form1
 from.models import login
 from.models import createblog
+
 # Create your views here.
 
 def home(request):
@@ -62,3 +64,6 @@ def update(request,id):
         form.save()
         return redirect("show")
     return render(request,"BLOG_POSTS/eedit.html",{'createblogs':createblogs})
+
+class homepageview(TemplateView):
+    template_name='BLOG_POSTS/firstpage.html'

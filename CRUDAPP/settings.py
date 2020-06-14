@@ -40,7 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BLOG_POSTS',
+    'users',
+
 ]
+
+AUTH_USER_MODEL='users.CustomUser'
+
+LOGIN_REDIRECT_URL="/BLOG_POSTS/success"
+LOGOUT_REDIRECT_URL="home"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

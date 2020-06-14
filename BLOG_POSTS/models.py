@@ -5,6 +5,7 @@ import datetime
 class login(models.Model):
     Name=models.CharField(max_length=30)
     Password = models.CharField(max_length=20)
+    ReEnterPassword=models.CharField(max_length=20)
     Email = models.EmailField(max_length=30)
 
     def __str__(self):
