@@ -67,3 +67,7 @@ def update(request,id):
 
 class homepageview(TemplateView):
     template_name='BLOG_POSTS/firstpage.html'
+
+
+def test(request):
+    return render(request,"BLOG_POSTS/test.html")

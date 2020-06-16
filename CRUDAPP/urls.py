@@ -17,12 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from BLOG_POSTS import views
 from django.urls import path,include
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('BLOG_POSTS/',include('BLOG_POSTS.urls')),
     path('update/<int:id>', views.update),
     path('',views.homepageview.as_view(),name='home'),
     path('users/',include('users.urls')),
-    path('users/',include('django.contrib.auth.urls'))
+    #path('users/',include('django.contrib.auth.urls'))
+    path('accounts/',include("allauth.urls")),
+    path('test/',views.test),
+
 
 ]
