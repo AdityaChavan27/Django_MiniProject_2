@@ -18,17 +18,18 @@
 
 <p><a href="{% url 'account_logout' %}">Logout </a> </p>
 {% else %}
+<div class="login-box">
 
-<p> <a href ="{%url 'account_signup' %}"> Signup </a> </p>
+<p><button class="btn1"> <a href ="{%url 'account_signup' %}"> Signup </a></button> </p>
 
-<p> <a href = "{%url 'account_login' %}"> Login </a> </p>
+    <p><button class="btn2"> <a href = "{%url 'account_login' %}"> Login </a></button> </p>
 
-<p> <a href = "{% provider_login_url 'google' %}"> Login with Gmail </a> </p>
+    <p><button class="btn3"> <a href = "{% provider_login_url 'google' %}"> Login with Gmail </a> </button></p>
 
-<p> <a href = "{% provider_login_url 'twitter' %}"> Login with Twitter </a> </p>
+    <p> <button class="btn4"><a href = "{% provider_login_url 'twitter' %}"> Login with Twitter </a></button> </p>
 
-<p> <a href = "{% provider_login_url 'facebook' method='oauth2' %}"> Login with Facebook </a> </p>
+    <p><button class="btn5"> <a href = "{% provider_login_url 'facebook' method='oauth2' %}"> Login with Facebook </a></button> </p>
 {%endif%}
-
+</div>
 </body>
 </html>
