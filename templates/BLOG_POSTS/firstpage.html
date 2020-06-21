@@ -9,14 +9,20 @@
 </head>
 
 
-<body>
+<>
 <h1><center> Welcome to Travel Blog</center></h1>
 
 
 {% if user.is_authenticated %}
-<p><h1> hi  {{user.username}} </h1> </p>
 
-<p><a href="{% url 'account_logout' %}">Logout </a> </p>
+<center><h2 style="color:#808000;font-weight: bold;font-size: 39px;font-style:oblique"> Hello  {{user.username}} </h2> </center>
+<button class="b1"><a href='/BLOG_POSTS/create_blog'> Redirect to Create blog</a></button>
+<br/>
+<button class="b2"><a href='/BLOG_POSTS/show'> Redirect to Read blog</a></button>
+<br/>
+<button class="b3"><a href="{% url 'account_logout' %}">Logout </a></button>
+
+
 {% else %}
 <div class="login-box">
 
